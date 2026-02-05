@@ -54,3 +54,4 @@ if (sleep === "yes" || sleep === "y") {
 } console.log('I can\'t wait to sleep, even now!')
 
 alert ('Welcome ' + usrName)
+  console.log('User\'s name is ' + usrName)
