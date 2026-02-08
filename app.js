@@ -53,5 +53,28 @@ if (sleep === "yes" || sleep === "y") {
     alert ("Please answer with 'Yes' or 'No'")
 } console.log('I can\'t wait to sleep, even now!')
 
-alert ('Welcome ' + usrName)
-  console.log('User\'s name is ' + usrName)
+const number = 4;
+let guessedCorrectly = false;
+
+for (let attempts = 1; attempts <= 4; attempts++) {
+  let guess = Number(prompt("Guess a number between 1–10!"));
+
+  if (guess > number) {
+    alert("Too high!");
+  } else if (guess < number) {
+    alert("Too low!");
+  } else {
+    alert("Correct!");
+    guessedCorrectly = true;
+    break;
+  }
+}
+
+if (!guessedCorrectly) {
+  alert("Out of attempts. The correct number was " + number);
+}
+
+
+alert ('Welcome ' + usrName + '!')
+
+ console.log('User\'s name is ' + usrName)
