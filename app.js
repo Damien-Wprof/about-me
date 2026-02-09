@@ -2,7 +2,10 @@
 
 
 let usrName = prompt("What's you're name?")
+alert ('Welcome ' + usrName + '!')
+console.log('User\'s name is ' + usrName)
 
+function videoGame() {
 let vidGame = prompt(usrName + ", Do I like video games? (yes/no)").toLowerCase();
 
 if (vidGame === "yes" || vidGame === "y") {
@@ -11,8 +14,10 @@ if (vidGame === "yes" || vidGame === "y") {
     alert ("Wrong!")
 } else {
     alert ("Please answer with 'Yes' or 'No'")
-} console.log("I love video games for you're information!")
+} console.log("I love video games for your information!")
+}
 
+function cats(){
 let cat = prompt(usrName + ", Am I a cat person? (yes/no)").toLowerCase();
 
 if (cat === "yes" || cat === "y") {
@@ -22,7 +27,9 @@ if (cat === "yes" || cat === "y") {
 } else {
     alert ("Please answer with 'Yes' or 'No'")
 } console.log("I love my cat jack, he's a cutie pie")
+}
 
+function foods() {
 let food = prompt(usrName + ", Do I like food? (yes/no)").toLowerCase();
 
 if (food === "yes" || food === "y") {
@@ -32,7 +39,9 @@ if (food === "yes" || food === "y") {
 } else {
     alert ("Shouldn't it be obvious?")
 } console.log ("This *should* be obvious")
+}
 
+function mama() {
 let mom = prompt(usrName +", Isn't my favorite person my mom? (yes/no)").toLowerCase();
 
 if (mom === "yes" || mom === "y") {
@@ -42,7 +51,9 @@ if (mom === "yes" || mom === "y") {
 } else {
     alert ("Please answer with 'Yes' or 'No'")
 } console.log("My mom is my favorite")
+}
 
+function sleepy() {
 let sleep = prompt(usrName + ", Don't I love to sleep? (yes/no)").toLowerCase();
 
 if (sleep === "yes" || sleep === "y") {
@@ -52,6 +63,8 @@ if (sleep === "yes" || sleep === "y") {
 } else {
     alert ("Please answer with 'Yes' or 'No'")
 } console.log('I can\'t wait to sleep, even now!')
+}
+
 
 const number = 4;
 let guessedCorrectly = false;
@@ -62,9 +75,9 @@ for (let attempts = 1; attempts <= 4; attempts++) {
   if (guess > number) {
     alert("Too high!");
   } else if (guess < number) {
-    alert("Too low!");
+        alert("Too low!");
   } else {
-    alert("Correct!");
+        alert("Correct!");
     guessedCorrectly = true;
     break;
   }
@@ -75,6 +88,29 @@ if (!guessedCorrectly) {
 }
 
 
-alert ('Welcome ' + usrName + '!')
+let answers = ['rpg', 'fps', 'horror', 'simulation'];
+let attempts = 6;
+let correct = false;
 
- console.log('User\'s name is ' + usrName)
+while (attempts > 0 && !correct) {
+    let guess = prompt(
+        'What type of game genre do I like the most? (' + attempts + ' attempts left)'
+    ).toLowerCase();
+
+    if (answers.includes(guess)) {
+        alert('Correct!');
+        correct = true;
+    } else {
+        attempts--;
+        alert('Wrong!');
+    }
+}
+
+alert('Possible answers were: ' + answers.join(', '));
+
+
+/*videoGame();
+cats();
+foods();
+mama();
+sleepy();*/
