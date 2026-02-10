@@ -3,13 +3,14 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
-
-text-align: center;
-  
+    text-align: center;
 }
+
 ol {
   list-style: none;
   padding-left: 0;
   text-align: center;
 }
 
+  background-color: salmon;
+}
